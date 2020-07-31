@@ -1,0 +1,81 @@
+server:
+	const server = http.createServer(req,res,callback_when_request)
+	server.listen(port,host,callback_when_starts_listening)
+
+on received request:
+	two objects are created
+
+	req(http.IncomingMessage):
+		req.url // <-- caly url requesta	
+	res(http.ServerResponse):
+		res.statusCode = statuscode
+		res.writeHead(200, {'Content-type': 'text/html'}
+		res.write(what to write)
+		res.end(message at the end of the response)
+
+	
+url:
+	modul url do parsowania requestow zz adresu
+	const url = require("url")
+
+	how does url work (we can get it here req.url <---):
+		host:port/?var1=20&var2=Cheeseburger
+		? indicates query
+		& indicates passsing multiple variables at once
+	url methods:
+		var u = url.parse(req.url,true) // objekt z wszelkimi el adresu jako atrybuty;
+		u.query
+		u.host
+		u.pathname
+		u.search
+fs (filesystem): 
+	fs.readFile(filename, callback(err,data)) <-- regular file read
+	fs.appendFile(filename, newData, callback(err))
+	fs.open(filename, flag np. w/r, callback(err,data))
+	fs.writeFile(filename, newData, callback(err))
+	fs.unlink(filename,callback(err))
+events:
+	emitter = new events.EventEmitter()	
+	emitter.on('nameofevent',callback_to_do)
+	emitter.emit('nameofevent')
+npm:
+	npm install packagename	
+
+mysql:
+	con = mysql.createConnection({host: "hostname", user: "", password: ""})
+	con.connect(callback_on_attempt())
+	con.query(sqlQuery, callback_on_attempt(err,result))
+	result has all the data from query like this
+		prop1	prop2
+	0 	23	34
+	1	12	22
+	2	33	84
+	3	12	23
+	4	123	123
+
+	under 0 there is object that has prop1 and prop2 as properties
+express:
+	npx express-generator //generates express template
+	require('express')
+	app = express()
+	app.get('path', (req,res) => {callback})
+	app.listen(port,callback)
+	res.send(data_to_send_as_a_response)
+
+	routersy:
+	
+	np. host:port/route1/sth
+
+	tworzymy: router = express.Router()
+
+	router.get('/',callback) itd. tworzymy pathy
+	
+	app.use('/route1', router)
+	mozna rowniez zrobic
+		module.exports = router // zeby zaeksportowac
+
+
+
+
+
+

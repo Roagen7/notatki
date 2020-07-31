@@ -1,0 +1,20 @@
+SELECT:
+
+	SELECT * FROM table_name
+	SELECT columnName FROM table_name
+	SELECT * FROM table_name WHERE condition
+	condition np. WHERE Country='Mexico'
+	SELECT * FROM table_name WHERE condition1 AND NOT condition2
+	SELECT * FROM table_name WHERE condition1 OR condition2
+	SELECT * FROM table_name WHERE Country='Mexico' AND (City='' OR City='')
+ORDER BY:
+	SELECT * FROM table_name ORDER BY collumn1 ASC/DESC
+
+INSERT INTO:
+	INSERT INTO table_name (column1, col2, col3) VALUES (val1, val2, val3)
+NULL:
+	SELECT * FROM table_name WHERE City IS NULL / IS NOT NULL
+	IS NULL
+	IS NOT NULL
+
+
