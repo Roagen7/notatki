@@ -1,0 +1,38 @@
+podstawa:
+	const app = new Vue({
+		el: "#appid"
+		data: {
+			variables in json format
+
+			}
+		})
+		methods: {
+			functions go here
+			}
+
+	<div id = "appid"> 
+		{{ variable from data }}
+	</div>
+	
+directives:
+	v-bind:
+		title=""
+		propname="sth"
+
+	v-on:
+		click="functionname"
+	v-model="varname" //edycja zmiennych
+		<input v-model="varname">
+
+	v-if="condition"
+	v-for="sth in sths"
+	
+components:
+	Vue.component('component-name', {
+			...
+
+		props: ['todo'],
+		template: '<li> {{prop.attr}}</li>',
+		}
+
+
